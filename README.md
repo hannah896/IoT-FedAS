@@ -1,13 +1,6 @@
-# FedAS-vs-FedAvg-on-TinyImageNet
-사물인터넷 2분반 4팀  FedAS 최종 구현물
+# FedAS: 개인화 연합 학습의 불일치 문제 해결
+### 사물인터넷 Lab2 논문 구현 수행
 
-FedAS,
-FedAvg,
-FedPer 의 결과물을 담고 있음.
-
-추가 데이터 셋으로 학습했을 때의 FedAS, FedAvg의 Global 환경에서의 결과 비교 실험으로 추가실험 진행.
-
-32*32로 이미지 파일 변형후 실험 진행.
 
 ------------------------------------------------------------------------------------------------------
 # [CVPR24] FedAS: Bridging Inconsistency in Personalized Fedearated Learning
@@ -87,5 +80,13 @@ CS 제거:	낙오자 영향 확대 → 수렴 저하
 
 
 ## 추가 실험
+### FedAS-vs-FedAvg-on-TinyImageNet
+FedAS,
+FedAvg,
+FedPer 의 결과물을 담고 있음.
+
+추가 데이터 셋으로 학습했을 때의 FedAS, FedAvg의 Global 환경에서의 결과 비교 실험으로 추가실험 진행
+32*32로 이미지 파일 변형후 실험 진행.
+
 - 글로벌 환경 및 다양한 데이터셋에서도 안정적 성능 확인
 - FedAvg보다 더 높은 Robustness 확보
