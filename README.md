@@ -15,10 +15,6 @@ Code Implementation and Informations about FedAS
 
 
 
-## Abstract
-Personalized Federated Learning (PFL) is primarily designed to provide customized models for each client to better fit the non-iid distributed client data, which is a inherent challenge in Federated Learning. However, current PFL methods suffer from inconsistencies in both intra-client and inter-client levels: 1) The intra-client inconsistency stems from the asynchronous update strategy for personalized and shared parameters. In PFL, clients update their shared parameters to communicate and learn from others, while keeping personalized parts unchanged, leading to poor coordination between these two components. 2) The Inter-client inconsistency arises from “stragglers” - inactive clients that communicate and train with the server less frequently. This results in their undetrained personalized models and impedes the collaborative training stage for other clients. In this paper, we present a novel PFL framework named FedAS, which uses Federated Parameter-Alignment and Client-Synchronization to overcome above challenges. Initially, we enhance the localization of global parameters by infusing them with local insights. We make the shared parts learn from previous model, thereby increasing their local relevance and reducing the impact of parameter inconsistency. Furthermore, we design a robust aggregation method to mitigate the impact of stragglers by preventing the incorporation of their under-trained knowledge into aggregated model. Experimental results on Cifar10 and Cifar100 validate the effectiveness of our FedAS in achieving better performance and robustness against data heterogeneity.
-
-
 ## Citation
 ```
 @inproceedings{cvpr24_xiyuan_fedas,
@@ -47,6 +43,7 @@ Personalized Federated Learning (PFL) is primarily designed to provide customize
 
 
 
+
 ## 제안 기법: FedAS Framework
 PA(Parameter-Alignment) + CS(Client-Synchronization)
 두 가지 기법을 결합해 불일치 문제를 동시에 해결함
@@ -69,6 +66,7 @@ PA(Parameter-Alignment) + CS(Client-Synchronization)
 
 
 
+
 ## 알고리즘 개요 흐름
 1. 로컬 모델 학습 진행
 2. PA를 통해 전역 파라미터와 정렬
@@ -79,12 +77,14 @@ PA(Parameter-Alignment) + CS(Client-Synchronization)
 
 
 
+
 ## 실험 환경
 항목	        내용
 데이터셋	    CIFAR-10, CIFAR-100, TinyCIFAR
 데이터 분할 	Dirichlet 분포 기반 Non-IID
 백본 모델	    CNN 기반 네트워크
 비교 방식    	FedAvg, pFedMe, FedALA, FedProto 등 최신 PFL 기법
+
 
 
 
@@ -101,6 +101,7 @@ PA(Parameter-Alignment) + CS(Client-Synchronization)
 PA 제거:	내부 불일치 증가 → 성능 하락
 CS 제거:	낙오자 영향 확대 → 수렴 저하
 둘 다 유지:	최고 성능
+
 
 
 
