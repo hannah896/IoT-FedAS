@@ -120,7 +120,7 @@ FedPer 의 결과물을 담고 있음.
 
 
 
-# FedAS vs FedAvg on TinyImageNet – 설치 및 실행 메뉴얼
+# 설치 및 실행 메뉴얼
 
 ---
 
