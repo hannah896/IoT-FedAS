@@ -118,6 +118,8 @@ FedPer 의 결과물을 담고 있음.
 - 글로벌 환경 및 다양한 데이터셋에서도 안정적 성능 확인
 - FedAvg보다 더 높은 Robustness 확보
 
+
+
 # FedAS vs FedAvg on TinyImageNet – 설치 및 실행 메뉴얼
 
 ---
@@ -148,8 +150,7 @@ pip install -r requirements.txt
 
 ---
 
-※ 필요한 기본 라이브러리 (참고) + 더 있을수도 있음!
-
+※ 필요한 기본 라이브러리 (참고)
 ```
 numpy
 torch
@@ -313,19 +314,7 @@ tinycifar_fedavg_vs_fedas.png
 
 ---
 
-## 7. 전체 실행 순서 요약
-
----
-
-1. TinyImageNet 다운로드
-2.  `tiny2cifar.py` 실행 → 클라이언트 데이터 생성
-3.  `main.py` 실행 → FedAS / FedAvg 학습
-4. `results/` 폴더에서 결과 확인
-5. `compare_TinyCifar_test.py` 로 그래프 출력
-
----
-
-# 요약
+## 요약
 
 ---
 
